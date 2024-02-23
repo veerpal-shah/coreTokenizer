@@ -1,0 +1,5 @@
+program int A;
+begin A = 5;
+if A === 0 then loop;
+write A;
+end;

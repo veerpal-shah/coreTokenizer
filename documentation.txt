@@ -1,0 +1,30 @@
+Overview:
+    The Core Tokenizer is a Python class designed to tokenize input files 
+    containing source code written in the Core language. It scans the 
+    input file line by line and converts the text into tokens that are 
+    used by the parser for syntax analysis. The tokenizer implements a 
+    one-token-look-ahead (OTLA) strategy to provide the parser with the 
+    ability to check the next token without consuming it, as well as 
+    Greedy Tokenizing to consume the most possible tokens for a valid token. 
+
+Design:
+The Tokenizer class is composed of several methods that together handle the process of reading an input file and tokenizing its content:
+- __init__(filename): The constructor opens the provided file and initializes the tokenization process.
+- tokenize_line(): This method reads lines from the file, ignoring empty lines and tokenizing the content into tokens stored in a list.
+- add_token(token): Helper method that adds the token to the list with its corresponding type.
+- is_identifier(token): Helper method that checks whether a given string is a valid identifier.
+- get_token(): Returns the type of the current token without consuming it.
+- skip_token(): Moves the cursor to the next token, allowing the parser to consume the current token.
+- int_val(): Returns the integer value of the current token if it is of the integer type.
+- id_name(): Returns the string of the current token if it is an identifier.
+
+User Manual:
+- Ensure you have a Python interpreter. 
+- To run code, do:
+    Powershell: python3 tokenizer.py <test_file>
+    sample:     python3 tokenizer.py test.txt
+
+Testing:
+    To test, I created a file test.txt and edited it to replicate multiple environments and conditions to simulate extreme cases, normal cases, and erroneous cases. 
+
+To my knowledge, as of 2/23/2024, there are no bugs or missing features. 

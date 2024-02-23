@@ -1,0 +1,16 @@
+Core Tokenizer
+
+This Tokenizer takes in input from a file and scan input, convert them to tokens and make them available for use line-by-line. 
+
+
+List of files:
+    tokenizer.py -> Main program contanining all functional code to implement the core tokenizer
+
+    test.txt -> sample test file to test a couple possible inputs
+
+    documentation.txt -> description file to explain code more in-depth
+
+To run code, do:
+    Powershell: python3 tokenizer.py <test_file>
+    sample:     python3 tokenizer.py test.txt
+
